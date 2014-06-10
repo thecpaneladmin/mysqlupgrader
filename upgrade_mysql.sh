@@ -33,6 +33,11 @@ if [ $1 == "5.5" ] && [ "$CPANEL_VERSION" -lt 32 ];then
     exit 1
 fi
 
+if [ $1 == "5.1" ] && [ "$CPANEL_VERSION" -gt 42 ];then
+    echo "This version of MySQL is not supported on 11.44 or higher"
+    exit 1
+fi
+
 if [ $1 == "5.0" ] && [ "$CPANEL_VERSION" -gt 36 ];then
     echo "This version of MySQL is not supported on 11.38 or higher"
     exit 1
