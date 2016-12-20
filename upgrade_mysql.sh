@@ -27,6 +27,12 @@ if [ -z $1 ] || [[ $1 != '5.0' && $1 != '5.1' && $1 != '5.5' && $1 != '5.6' ]]; 
     exit 1
 fi
 
+# Script does not work with EA4
+if [ -e "/etc/cpanel/ea4/is_ea4" ];then
+    echo "This script is incompatible with EasyApache 4. Upgrade PHP via Yum instead."
+    exit 1
+fi
+
 # Check for incompatible versions
 if [ $1 == "5.5" ] && [ "$CPANEL_VERSION" -lt 32 ];then
     echo "You must be running cPanel 11.32 or higher to upgrade to MySQL 5.5"
