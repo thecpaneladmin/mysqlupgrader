@@ -1,3 +1,7 @@
+*** PLEASE NOTE THAT AS OF THE RELEASE OF EASYAPACHE 4, THIS SCRIPT IS NO LONGER NECESSARY AS
+PHP IS INSTALLED VIA RPM WITH MYSQL COMPATIBILITY PACKAGES. ***
+
+
 mysqlupgrader
 =============
 
@@ -10,6 +14,8 @@ http://www.thecpaneladmin.com/upgrading-mysql-without-breaking-php/
 =============
 Requirements
 =============
+
+This script will not function if your server is running EasyApache 4.
 
 Your server must be running the following:
 
